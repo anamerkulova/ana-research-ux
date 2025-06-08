@@ -12,7 +12,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container-width section-padding">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -27,13 +27,13 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-custom-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
                 >
                   {item.name}
                 </a>
               ))}
               <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Resume
+                CV
               </Button>
             </div>
           </div>
@@ -44,7 +44,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-custom-gray-700"
+              className="text-foreground"
             >
               <span className="sr-only">Open main menu</span>
               {!isMenuOpen ? (
@@ -68,7 +68,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-custom-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -76,7 +76,7 @@ const Navigation = () => {
               ))}
               <div className="pt-2">
                 <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Resume
+                  CV
                 </Button>
               </div>
             </div>

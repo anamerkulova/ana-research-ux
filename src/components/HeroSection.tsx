@@ -12,47 +12,49 @@ const HeroSection = () => {
       </div>
 
       <div className="container-width section-padding">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Main heading */}
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold text-custom-gray-900 mb-6 leading-tight">
-              Ana Merkulova
-            </h1>
-            
-            {/* Tagline */}
-            <p className="text-xl md:text-2xl text-primary font-medium mb-8 leading-relaxed">
-              UX Designer who bridges psychology and people experience
-            </p>
-            
-            {/* Brief intro */}
-            <p className="text-lg md:text-xl text-custom-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Combining a deep understanding of human psychology with innovative design thinking, 
-              I create digital experiences that truly resonate with people. My approach centers on 
-              empathy, research, and the belief that great design starts with understanding human behavior.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-teal-700 text-primary-foreground px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105"
-              >
-                View Case Studies
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300"
-              >
-                Learn About Me
-              </Button>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="animate-fade-in order-2 lg:order-1">
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                Hi, I'm Ana Merkulova
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-primary font-semibold mb-8 leading-relaxed">
+                UX Designer × Psychology Expert × People Experience Strategist
+              </p>
+              
+              <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+                I design experiences that help people grow—whether they're users, employees, 
+                or learners. With a foundation in educational psychology and 2 years of UX 
+                experience, I bring unique insight into how people learn, adapt, and thrive 
+                in digital spaces.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-teal-700 text-primary-foreground px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105"
+                >
+                  View My Work
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300"
+                >
+                  About Me
+                </Button>
+              </div>
             </div>
-          </div>
-          
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-custom-gray-400 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-custom-gray-400 rounded-full mt-2"></div>
+
+            {/* Professional headshot placeholder */}
+            <div className="order-1 lg:order-2 flex justify-center">
+              <div className="w-80 h-80 bg-gradient-to-br from-teal-100 to-coral-100 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-72 h-72 bg-muted rounded-full flex items-center justify-center">
+                  <span className="text-muted-foreground text-lg font-medium">Professional Photo</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
