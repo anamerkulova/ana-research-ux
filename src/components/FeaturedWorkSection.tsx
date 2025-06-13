@@ -21,11 +21,12 @@ const FeaturedWorkSection = () => {
       link: "/scottish-tech-army"
     },
     {
-      title: "Designing for Parents Under Pressure",
-      description: "Understanding the psychology of busy parents to create clearer, more intuitive school communication experiences through iterative testing and behavioral insights.",
-      tags: ["ParentHub", "Psychology", "Iterative Design"],
-      image: "placeholder-image-3",
-      isClickable: false
+      title: "Instarem UX/UI Product Internship",
+      description: "Redesigning card linking experiences and developing key features for a fintech platform used by millions. Led user research, created design systems, and collaborated with engineering teams.",
+      tags: ["Fintech", "Product Design", "Mobile UX"],
+      image: "/lovable-uploads/8237da60-5fe4-48a0-b668-06e1169deee1.png",
+      isClickable: true,
+      link: "/instarem"
     }
   ];
 
@@ -46,7 +47,7 @@ const FeaturedWorkSection = () => {
                       <div className="aspect-video bg-gradient-to-br from-teal-100 to-coral-100 rounded-t-lg flex items-center justify-center overflow-hidden p-4">
                         <img 
                           src={study.image} 
-                          alt="Scottish Tech Army mobile interface showing role filtering functionality"
+                          alt={study.title}
                           className="max-w-full max-h-full object-contain rounded-lg shadow-md"
                         />
                       </div>
