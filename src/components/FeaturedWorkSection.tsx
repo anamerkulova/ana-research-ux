@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -33,7 +32,7 @@ const FeaturedWorkSection = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section id="work" className="py-20">
       <div className="container-width section-padding">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-16">

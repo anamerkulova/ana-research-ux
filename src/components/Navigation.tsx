@@ -7,8 +7,24 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  const handleWorkClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // If we're not on the homepage, navigate there first
+    if (location.pathname !== '/') {
+      window.location.href = '/#work';
+      return;
+    }
+    
+    // If we're on the homepage, scroll to the work section
+    const workSection = document.querySelector('#work');
+    if (workSection) {
+      workSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const menuItems = [
-    { name: 'Work', href: '#work', isInternal: false },
+    { name: 'Work', href: '#work', isInternal: false, onClick: handleWorkClick },
     { name: 'About Me', href: '/about', isInternal: true },
     { name: 'Contact', href: '#contact', isInternal: false },
   ];
@@ -40,7 +56,8 @@ const Navigation = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                    onClick={item.onClick}
+                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
                   >
                     {item.name}
                   </a>
@@ -92,8 +109,13 @@ const Navigation = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200 font-medium"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {
+                      if (item.onClick) {
+                        item.onClick(e);
+                      }
+                      setIsMenuOpen(false);
+                    }}
+                    className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer"
                   >
                     {item.name}
                   </a>
