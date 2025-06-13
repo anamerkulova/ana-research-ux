@@ -413,21 +413,6 @@ const AboutMe = () => {
               <div className="space-y-8">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle>As a Designer</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <blockquote className="text-foreground italic text-lg leading-relaxed border-l-4 border-primary pl-6">
-                      "Every book I read, every course I take, every conversation I have with a mentor adds another lens through which I can understand user problems.
-                      <br /><br />
-                      My psychology background taught me to ask 'why' about human behavior. My UX training taught me to ask 'how' about solutions. My continuous learning helps me ask 'what if' about possibilities.
-                      <br /><br />
-                      This combination—understanding people deeply, solving problems systematically, and staying curious about new approaches—is what I bring to every project."
-                    </blockquote>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
                     <CardTitle>Recent Applications</CardTitle>
                   </CardHeader>
                   <CardContent>

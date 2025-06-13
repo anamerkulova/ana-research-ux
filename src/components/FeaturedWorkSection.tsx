@@ -58,7 +58,7 @@ const FeaturedWorkSection = () => {
                       }`}>
                         {study.showComingSoon ? (
                           <div className="flex items-center justify-center h-full">
-                            <span className="text-muted-foreground text-lg font-medium">Coming Soon</span>
+                            <span className="text-muted-foreground text-lg font-medium">Image updating</span>
                           </div>
                         ) : (
                           <div className={study.isFeatured ? 'relative' : ''}>
@@ -104,7 +104,7 @@ const FeaturedWorkSection = () => {
                           ))}
                         </div>
                         <span className="text-primary hover:text-secondary font-medium">
-                          {study.showComingSoon ? 'Coming Soon →' : 'View Case Study →'}
+                          {study.showComingSoon ? 'Image updating →' : 'View Case Study →'}
                         </span>
                       </CardContent>
                     </Card>
