@@ -6,11 +6,13 @@ import { Link } from 'react-router-dom';
 const FeaturedWorkSection = () => {
   const caseStudies = [
     {
-      title: "Designing at Scale: From Chaos to Capability",
+      title: "Designing for Impact: From Chaos to Capability",
       description: "How I transformed a 3-month government programme from an impossible deadline into a measurable success story—recruiting and training 30 coaches while building organizational design capability.",
       tags: ["Government Programme", "Service Design", "People Experience"],
-      image: "placeholder-image-1",
-      isClickable: false
+      image: "/lovable-uploads/b914adac-0a19-4e66-9c35-16d1fd422cf4.png",
+      isClickable: true,
+      link: "/government-programme",
+      isFeatured: true
     },
     {
       title: "Building Inclusive Experiences Through Team Collaboration", 
@@ -43,16 +45,36 @@ const FeaturedWorkSection = () => {
               if (study.isClickable) {
                 return (
                   <Link key={index} to={study.link}>
-                    <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
-                      <div className="aspect-video bg-gradient-to-br from-teal-100 to-coral-100 rounded-t-lg flex items-center justify-center overflow-hidden p-4">
-                        <img 
-                          src={study.image} 
-                          alt={study.title}
-                          className="max-w-full max-h-full object-contain rounded-lg shadow-md"
-                        />
+                    <Card className={`border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer ${
+                      study.isFeatured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5' : ''
+                    }`}>
+                      <div className={`aspect-video bg-gradient-to-br rounded-t-lg flex items-center justify-center overflow-hidden p-4 ${
+                        study.isFeatured 
+                          ? 'from-primary/20 via-secondary/15 to-accent/20' 
+                          : 'from-teal-100 to-coral-100'
+                      }`}>
+                        <div className={study.isFeatured ? 'relative' : ''}>
+                          {study.isFeatured && (
+                            <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-lg blur-sm"></div>
+                          )}
+                          <img 
+                            src={study.image} 
+                            alt={study.title}
+                            className={`max-w-full max-h-full object-contain rounded-lg shadow-md ${
+                              study.isFeatured ? 'relative shadow-lg' : ''
+                            }`}
+                          />
+                        </div>
                       </div>
                       <CardContent className="p-6">
-                        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                        {study.isFeatured && (
+                          <div className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full mb-3">
+                            FEATURED
+                          </div>
+                        )}
+                        <h3 className={`text-xl font-semibold mb-3 group-hover:text-primary transition-colors ${
+                          study.isFeatured ? 'text-foreground' : 'text-foreground'
+                        }`}>
                           {study.title}
                         </h3>
                         <p className="text-muted-foreground mb-4 leading-relaxed">
@@ -62,7 +84,11 @@ const FeaturedWorkSection = () => {
                           {study.tags.map((tag, tagIndex) => (
                             <span 
                               key={tagIndex}
-                              className="px-3 py-1 bg-accent/20 text-primary text-sm rounded-full font-medium"
+                              className={`px-3 py-1 text-sm rounded-full font-medium ${
+                                study.isFeatured 
+                                  ? 'bg-primary/15 text-primary' 
+                                  : 'bg-accent/20 text-primary'
+                              }`}
                             >
                               {tag}
                             </span>
