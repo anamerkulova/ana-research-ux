@@ -13,7 +13,7 @@ const FeaturedWorkSection = () => {
       isClickable: true,
       link: "/government-programme",
       isFeatured: true,
-      showComingSoon: false
+      showComingSoon: true
     },
     {
       title: "Building Inclusive Experiences Through Team Collaboration", 
@@ -31,7 +31,7 @@ const FeaturedWorkSection = () => {
       image: "/lovable-uploads/8237da60-5fe4-48a0-b668-06e1169deee1.png",
       isClickable: true,
       link: "/instarem",
-      showComingSoon: true
+      showComingSoon: false
     }
   ];
 
