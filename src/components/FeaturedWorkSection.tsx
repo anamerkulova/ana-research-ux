@@ -43,16 +43,12 @@ const FeaturedWorkSection = () => {
                 return (
                   <Link key={index} to={study.link}>
                     <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
-                      <div className="aspect-video bg-gradient-to-br from-teal-100 to-coral-100 rounded-t-lg flex items-center justify-center overflow-hidden">
-                        {study.image.startsWith('/lovable-uploads/') ? (
-                          <img 
-                            src={study.image} 
-                            alt="Scottish Tech Army mobile interface showing role filtering functionality"
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <span className="text-muted-foreground font-medium">Project Visual</span>
-                        )}
+                      <div className="aspect-video bg-gradient-to-br from-teal-100 to-coral-100 rounded-t-lg flex items-center justify-center overflow-hidden p-4">
+                        <img 
+                          src={study.image} 
+                          alt="Scottish Tech Army mobile interface showing role filtering functionality"
+                          className="max-w-full max-h-full object-contain rounded-lg shadow-md"
+                        />
                       </div>
                       <CardContent className="p-6">
                         <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
