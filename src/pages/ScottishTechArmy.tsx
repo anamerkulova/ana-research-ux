@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -13,23 +12,58 @@ const ScottishTechArmy = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-teal-50 to-coral-100">
         <div className="container-width section-padding">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Scottish Tech Army: 
-              <span className="text-gradient block mt-2">Inclusive Filter Design</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Creating accessible volunteer role search filters while navigating 
-              technical constraints and building cross-functional team alignment.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground mb-8">
-              <div><strong>Timeline:</strong> Ongoing (2024)</div>
-              <div><strong>Role:</strong> UX Designer in cross-functional team</div>
-            </div>
-            <div className="flex flex-wrap justify-center gap-3">
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Accessibility</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Stakeholder Alignment</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Collaborative Design</span>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  Scottish Tech Army: 
+                  <span className="text-gradient block mt-2">Inclusive Filter Design</span>
+                </h1>
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl leading-relaxed">
+                  Creating accessible volunteer role search filters while navigating 
+                  technical constraints and building cross-functional team alignment.
+                </p>
+                <div className="flex flex-wrap justify-start gap-6 text-sm text-muted-foreground mb-8">
+                  <div><strong>Timeline:</strong> Ongoing (2024)</div>
+                  <div><strong>Role:</strong> UX Designer in cross-functional team</div>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Accessibility</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Stakeholder Alignment</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Collaborative Design</span>
+                </div>
+              </div>
+
+              {/* Mobile Interface Screenshots */}
+              <div className="relative">
+                <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
+                  <div className="transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                    <img 
+                      src="/lovable-uploads/38c72600-90b8-4611-9d3b-6e63f0b28961.png"
+                      alt="Mobile interface showing role filters with categories like Research, Engineering, Support, Design, Quality Assurance, and Product"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
+                  <div className="transform -rotate-1 hover:rotate-0 transition-transform duration-300 mt-4">
+                    <img 
+                      src="/lovable-uploads/88ead1c2-0147-4fb6-b39f-924e187799e4.png"
+                      alt="Filtered results showing Design roles including UI Designer, UX/UI Designer, and Web Designer positions"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
+                  <div className="transform rotate-1 hover:rotate-0 transition-transform duration-300 mt-2">
+                    <img 
+                      src="/lovable-uploads/525de434-94e5-4a5e-b306-13cc023a0d06.png"
+                      alt="Role listings showing various positions including Business Analyst, UI Designer, Product Manager, and React Developer"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-primary/10 backdrop-blur-sm rounded-full px-4 py-2 text-primary font-medium text-sm">
+                  Before & After
+                </div>
+              </div>
             </div>
           </div>
         </div>

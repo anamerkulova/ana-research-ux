@@ -39,49 +39,72 @@ const FeaturedWorkSection = () => {
           
           <div className="grid lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => {
-              const CardWrapper = study.isClickable ? Link : 'div';
-              const cardProps = study.isClickable ? { to: study.link } : {};
-              
-              return (
-                <CardWrapper key={index} {...cardProps}>
-                  <Card className={`border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group ${study.isClickable ? 'cursor-pointer' : ''}`}>
-                    <div className="aspect-video bg-gradient-to-br from-teal-100 to-coral-100 rounded-t-lg flex items-center justify-center">
-                      <span className="text-muted-foreground font-medium">Project Visual</span>
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                        {study.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {study.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {study.tags.map((tag, tagIndex) => (
-                          <span 
-                            key={tagIndex}
-                            className="px-3 py-1 bg-accent/20 text-primary text-sm rounded-full font-medium"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+              if (study.isClickable) {
+                return (
+                  <Link key={index} to={study.link}>
+                    <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+                      <div className="aspect-video bg-gradient-to-br from-teal-100 to-coral-100 rounded-t-lg flex items-center justify-center">
+                        <span className="text-muted-foreground font-medium">Project Visual</span>
                       </div>
-                      {!study.isClickable && (
+                      <CardContent className="p-6">
+                        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                          {study.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-4 leading-relaxed">
+                          {study.description}
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {study.tags.map((tag, tagIndex) => (
+                            <span 
+                              key={tagIndex}
+                              className="px-3 py-1 bg-accent/20 text-primary text-sm rounded-full font-medium"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        <span className="text-primary hover:text-secondary font-medium">
+                          View Case Study →
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                );
+              } else {
+                return (
+                  <div key={index}>
+                    <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                      <div className="aspect-video bg-gradient-to-br from-teal-100 to-coral-100 rounded-t-lg flex items-center justify-center">
+                        <span className="text-muted-foreground font-medium">Project Visual</span>
+                      </div>
+                      <CardContent className="p-6">
+                        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                          {study.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-4 leading-relaxed">
+                          {study.description}
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {study.tags.map((tag, tagIndex) => (
+                            <span 
+                              key={tagIndex}
+                              className="px-3 py-1 bg-accent/20 text-primary text-sm rounded-full font-medium"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                         <Button 
                           variant="link" 
                           className="p-0 h-auto text-primary hover:text-secondary font-medium"
                         >
                           View Case Study →
                         </Button>
-                      )}
-                      {study.isClickable && (
-                        <span className="text-primary hover:text-secondary font-medium">
-                          View Case Study →
-                        </span>
-                      )}
-                    </CardContent>
-                  </Card>
-                </CardWrapper>
-              );
+                      </CardContent>
+                    </Card>
+                  </div>
+                );
+              }
             })}
           </div>
         </div>
