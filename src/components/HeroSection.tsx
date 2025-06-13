@@ -3,6 +3,13 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
+  const handleViewWorkClick = () => {
+    const workSection = document.querySelector('#work');
+    if (workSection) {
+      workSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background decoration */}
@@ -36,6 +43,7 @@ const HeroSection = () => {
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-teal-700 text-primary-foreground px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105"
+                  onClick={handleViewWorkClick}
                 >
                   View My Work
                 </Button>
@@ -48,6 +56,10 @@ const HeroSection = () => {
                   <Link to="/about">About Me</Link>
                 </Button>
               </div>
+              
+              <p className="text-sm text-muted-foreground mt-6 italic">
+                As part of personal development I am building this portfolio on a no-code tool. It is certainly a work in progress (aren't we all?)
+              </p>
             </div>
 
             {/* Professional headshot */}

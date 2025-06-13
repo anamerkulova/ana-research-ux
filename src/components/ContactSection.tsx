@@ -21,8 +21,11 @@ const ContactSection = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-coral-600 text-white px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105"
+              asChild
             >
-              Get In Touch
+              <a href="https://www.linkedin.com/in/anastasia-merkulova-165224157/" target="_blank" rel="noopener noreferrer">
+                Get In Touch
+              </a>
             </Button>
             <Button 
               variant="outline" 
@@ -35,8 +38,11 @@ const ContactSection = () => {
               variant="outline" 
               size="lg" 
               className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-medium transition-all duration-300"
+              asChild
             >
-              LinkedIn
+              <a href="https://www.linkedin.com/in/anastasia-merkulova-165224157/" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
             </Button>
           </div>
         </div>
