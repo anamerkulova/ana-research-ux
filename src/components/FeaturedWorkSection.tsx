@@ -9,7 +9,7 @@ const FeaturedWorkSection = () => {
       title: "Designing for Impact: From Chaos to Capability",
       description: "How I transformed a 3-month government programme from an impossible deadline into a measurable success story—recruiting and training 30 coaches while building organizational design capability.",
       tags: ["Government Programme", "Service Design", "People Experience"],
-      image: "/lovable-uploads/b914adac-0a19-4e66-9c35-16d1fd422cf4.png",
+      image: "/lovable-uploads/33313e3f-ef75-47fc-9d3a-30d8db86df37.png",
       isClickable: true,
       link: "/government-programme",
       isFeatured: true
