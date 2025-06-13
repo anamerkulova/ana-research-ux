@@ -11,12 +11,12 @@ const ValuePropsSection = () => {
     {
       icon: "🤝",
       title: "People Experience Focus", 
-      description: "I specialize in designing employee experiences, organizational change, and building design capability within teams—bridging the gap between UX and HR."
+      description: "I specialise in building design capability within teams, uncovering research insights and applying this knowledge to strategy—bridging the gap between UX and organizational growth."
     },
     {
       icon: "📈",
-      title: "Proven Impact at Scale",
-      description: "From recruiting 30 government coaches in 3 months to building design capability across organizations, I deliver measurable results under pressure."
+      title: "Proven Impact",
+      description: "From recruiting 30 users in 3 months to taking them through a learning journey with measurable impact, I think ahead and ensure we design for change."
     },
     {
       icon: "🌍",
