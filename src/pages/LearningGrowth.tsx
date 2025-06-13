@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Award, Target, Users, ExternalLink } from 'lucide-react';
+import { BookOpen, Award, Target, Users, ExternalLink, User } from 'lucide-react';
 
 const LearningGrowth = () => {
   return (
@@ -14,17 +14,49 @@ const LearningGrowth = () => {
           <div className="container-width section-padding">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Learning Never Stops
+                About Me
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                As a designer who bridges psychology and user experience, I'm particularly interested in responsible service design, instructional design and storytelling. Here are the books, courses, and experiences that shape how I approach design challenges.
+                As a designer who bridges psychology and user experience, I'm particularly interested in responsible service design, instructional design and storytelling. Here's my story and the learning that shapes how I approach design challenges.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Books Section */}
+        {/* Personal Story Section */}
         <section className="py-20">
+          <div className="container-width section-padding">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-12">
+                <User className="h-8 w-8 text-primary" />
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  My Journey into Design
+                </h2>
+              </div>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-8">
+                  <div className="prose prose-lg max-w-none text-foreground">
+                    <p className="text-lg leading-relaxed mb-6">
+                      I've always been interested in the learning process in people behaviour, and loved books. So my transition to experience design has not been typical, as I didn't really draw up until a couple of years ago.
+                    </p>
+                    
+                    <p className="text-lg leading-relaxed mb-6">
+                      However, I liked working with people and making complex things easy for them, and I spent my 20s as a language teacher. There is quite a lot of frustrating software people need to work with as teachers, and somehow I became a go-to person for that. I'd create surveys, find efficient ways to collect people's feedback to make sure people feel heard.
+                    </p>
+                    
+                    <p className="text-lg leading-relaxed">
+                      I'm keen on hearing all sides of the story and approaching problems from the 'why' side. People and Learning experience still interests me most, so every project I begin with finding alignment with people, and understanding what we all need to learn to start moving in the right direction.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Books Section */}
+        <section className="py-20 bg-muted/30">
           <div className="container-width section-padding">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-3 mb-12">
@@ -114,7 +146,7 @@ const LearningGrowth = () => {
         </section>
 
         {/* Certifications Section */}
-        <section className="py-20 bg-muted/30">
+        <section className="py-20">
           <div className="container-width section-padding">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-3 mb-12">
@@ -257,7 +289,7 @@ const LearningGrowth = () => {
         </section>
 
         {/* Learning Goals Section */}
-        <section className="py-20 bg-muted/30">
+        <section className="py-20">
           <div className="container-width section-padding">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-3 mb-12">
@@ -341,18 +373,18 @@ const LearningGrowth = () => {
           </div>
         </section>
 
-        {/* Reflection Section */}
-        <section className="py-20">
+        {/* How Learning Shapes My Practice Section */}
+        <section className="py-20 bg-muted/30">
           <div className="container-width section-padding">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-                Reflection & Application
+                How Learning Shapes My Practice
               </h2>
 
               <div className="space-y-8">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <CardTitle>How Learning Shapes My Practice</CardTitle>
+                    <CardTitle>As a Designer</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <blockquote className="text-foreground italic text-lg leading-relaxed border-l-4 border-primary pl-6">
