@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
@@ -8,8 +9,7 @@ const Navigation = () => {
 
   const menuItems = [
     { name: 'Work', href: '#work', isInternal: false },
-    { name: 'Learning', href: '/learning', isInternal: true },
-    { name: 'About', href: '#about', isInternal: false },
+    { name: 'About Me', href: '/about', isInternal: true },
     { name: 'Contact', href: '#contact', isInternal: false },
   ];
 

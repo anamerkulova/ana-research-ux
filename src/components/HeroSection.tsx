@@ -42,18 +42,21 @@ const HeroSection = () => {
                   variant="outline" 
                   size="lg" 
                   className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300"
+                  asChild
                 >
-                  About Me
+                  <Link to="/about">About Me</Link>
                 </Button>
               </div>
             </div>
 
-            {/* Professional headshot placeholder */}
+            {/* Professional headshot */}
             <div className="order-1 lg:order-2 flex justify-center">
-              <div className="w-80 h-80 bg-gradient-to-br from-teal-100 to-coral-100 rounded-full flex items-center justify-center shadow-lg">
-                <div className="w-72 h-72 bg-muted rounded-full flex items-center justify-center">
-                  <span className="text-muted-foreground text-lg font-medium">Professional Photo</span>
-                </div>
+              <div className="w-80 h-80 rounded-full overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/e486c2e1-71e5-40a5-9882-f813d754948e.png" 
+                  alt="Ana Merkulova professional headshot"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
