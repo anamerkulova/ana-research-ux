@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -11,7 +12,8 @@ const FeaturedWorkSection = () => {
       image: "/lovable-uploads/33313e3f-ef75-47fc-9d3a-30d8db86df37.png",
       isClickable: true,
       link: "/government-programme",
-      isFeatured: true
+      isFeatured: true,
+      showComingSoon: false
     },
     {
       title: "Building Inclusive Experiences Through Team Collaboration", 
@@ -19,7 +21,8 @@ const FeaturedWorkSection = () => {
       tags: ["Scottish Tech Army", "Accessibility", "Team Collaboration"],
       image: "/lovable-uploads/645121d5-cdcb-4712-8105-50dd911f48b3.png",
       isClickable: true,
-      link: "/scottish-tech-army"
+      link: "/scottish-tech-army",
+      showComingSoon: true
     },
     {
       title: "Instarem UX/UI Product Internship",
@@ -27,7 +30,8 @@ const FeaturedWorkSection = () => {
       tags: ["Fintech", "Product Design", "Mobile UX"],
       image: "/lovable-uploads/8237da60-5fe4-48a0-b668-06e1169deee1.png",
       isClickable: true,
-      link: "/instarem"
+      link: "/instarem",
+      showComingSoon: true
     }
   ];
 
@@ -52,18 +56,24 @@ const FeaturedWorkSection = () => {
                           ? 'from-primary/20 via-secondary/15 to-accent/20' 
                           : 'from-teal-100 to-coral-100'
                       }`}>
-                        <div className={study.isFeatured ? 'relative' : ''}>
-                          {study.isFeatured && (
-                            <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-lg blur-sm"></div>
-                          )}
-                          <img 
-                            src={study.image} 
-                            alt={study.title}
-                            className={`max-w-full max-h-full object-contain rounded-lg shadow-md ${
-                              study.isFeatured ? 'relative shadow-lg' : ''
-                            }`}
-                          />
-                        </div>
+                        {study.showComingSoon ? (
+                          <div className="flex items-center justify-center h-full">
+                            <span className="text-muted-foreground text-lg font-medium">Coming Soon</span>
+                          </div>
+                        ) : (
+                          <div className={study.isFeatured ? 'relative' : ''}>
+                            {study.isFeatured && (
+                              <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-lg blur-sm"></div>
+                            )}
+                            <img 
+                              src={study.image} 
+                              alt={study.title}
+                              className={`max-w-full max-h-full object-contain rounded-lg shadow-md ${
+                                study.isFeatured ? 'relative shadow-lg' : ''
+                              }`}
+                            />
+                          </div>
+                        )}
                       </div>
                       <CardContent className="p-6">
                         {study.isFeatured && (
@@ -94,7 +104,7 @@ const FeaturedWorkSection = () => {
                           ))}
                         </div>
                         <span className="text-primary hover:text-secondary font-medium">
-                          View Case Study →
+                          {study.showComingSoon ? 'Coming Soon →' : 'View Case Study →'}
                         </span>
                       </CardContent>
                     </Card>

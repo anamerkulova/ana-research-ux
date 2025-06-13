@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -35,13 +34,8 @@ const GovernmentProgramme = () => {
                 </div>
               </div>
               <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-xl"></div>
-                  <img 
-                    src="/lovable-uploads/b914adac-0a19-4e66-9c35-16d1fd422cf4.png" 
-                    alt="Government programme design process and team collaboration"
-                    className="relative max-w-lg rounded-lg shadow-2xl"
-                  />
+                <div className="relative bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-16 flex items-center justify-center min-h-[300px]">
+                  <span className="text-muted-foreground text-xl font-medium">Coming Soon</span>
                 </div>
               </div>
             </div>
