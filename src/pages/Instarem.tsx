@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -146,13 +145,6 @@ const Instarem = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-foreground mb-16">Design Process</h2>
             
-            <div className="mb-12">
-              <img 
-                src="/lovable-uploads/cade7d3e-b9b3-46a4-90f8-9e9c7b22dce4.png" 
-                alt="Complete design process and documentation"
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
 
             <div className="prose prose-lg max-w-none">
               <h3 className="text-2xl font-semibold text-foreground mb-4">Research & Analysis</h3>
