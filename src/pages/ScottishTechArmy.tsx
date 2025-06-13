@@ -1,3 +1,4 @@
+
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -171,6 +172,49 @@ const ScottishTechArmy = () => {
               <p className="text-foreground font-medium">
                 <strong>Psychology insight:</strong> When people volunteer, they're making an emotional 
                 investment. Frustrating experiences undermine their motivation to contribute.
+              </p>
+            </div>
+          </section>
+
+          {/* User Testing Results Section */}
+          <section>
+            <h2 className="text-3xl font-bold text-foreground mb-6">
+              Testing Results: Measurable Improvement
+            </h2>
+            <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+              We conducted usability testing with 8 volunteers to validate our design improvements. 
+              The results showed significant improvements in both task completion and user satisfaction.
+            </p>
+            
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/lovable-uploads/b914adac-0a19-4e66-9c35-16d1fd422cf4.png"
+                alt="User testing results showing before and after comparison: Direct success improved from 75% to 83.3%, Mission unfinished decreased from 25% to 16.7%"
+                className="max-w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="bg-primary/5 border border-primary/20">
+                <CardContent className="p-6">
+                  <h4 className="font-semibold text-foreground mb-3">Direct Success Rate</h4>
+                  <div className="text-3xl font-bold text-primary mb-2">83.3%</div>
+                  <p className="text-muted-foreground text-sm">Up from 75% - volunteers found relevant roles faster</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-secondary/5 border border-secondary/20">
+                <CardContent className="p-6">
+                  <h4 className="font-semibold text-foreground mb-3">Task Abandonment</h4>
+                  <div className="text-3xl font-bold text-secondary mb-2">16.7%</div>
+                  <p className="text-muted-foreground text-sm">Down from 25% - fewer people gave up searching</p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-6 bg-accent/20 p-6 rounded-lg">
+              <p className="text-foreground font-medium italic">
+                "The menu is easier to read. The menu isn't translucent and the background is 
+                dimmed to draw attention to the menu." - Tester #22068776
               </p>
             </div>
           </section>
