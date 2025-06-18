@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
@@ -63,19 +62,14 @@ const Navigation = () => {
                   </a>
                 )
               ))}
-              <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                CV
-              </Button>
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-foreground"
+              className="text-foreground p-2"
             >
               <span className="sr-only">Open main menu</span>
               {!isMenuOpen ? (
@@ -87,7 +81,7 @@ const Navigation = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               )}
-            </Button>
+            </button>
           </div>
         </div>
 
@@ -121,11 +115,6 @@ const Navigation = () => {
                   </a>
                 )
               ))}
-              <div className="pt-2">
-                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  CV
-                </Button>
-              </div>
             </div>
           </div>
         )}
