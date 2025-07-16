@@ -251,7 +251,7 @@ const GovernmentProgramme = () => {
               Almost everyone had just started and was keen to get going without spending time in meetings.
             </p>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md mb-8">
               <h3 className="text-xl font-semibold text-foreground mb-4">My Approach:</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start">
@@ -267,6 +267,19 @@ const GovernmentProgramme = () => {
                   Facilitated decision-making sessions where we assessed our assumptions
                 </li>
               </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/1caedb03-87f6-4e26-8a19-e5b49ea5b793.png" 
+                  alt="Concept story diagram showing customer journey and pain points"
+                  className="w-full rounded-lg"
+                />
+              </div>
+              <p className="text-muted-foreground text-center italic">
+                Example of a concept story I created to align the team on what is important to our customers
+              </p>
             </div>
           </div>
         </div>
