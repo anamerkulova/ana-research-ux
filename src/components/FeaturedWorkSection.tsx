@@ -9,11 +9,14 @@ const FeaturedWorkSection = () => {
       title: "Led the team to create a learning experience for people we knew nothing about",
       description: "How I transformed a 3-month government programme from an impossible deadline into a measurable success story—recruiting and training 30 coaches while building organizational design capability.",
       tags: ["Government Programme", "Service Design", "People Experience"],
-      image: "/lovable-uploads/33313e3f-ef75-47fc-9d3a-30d8db86df37.png",
+      images: [
+        "/lovable-uploads/8f142008-9ff9-4c7e-bcf5-625a7dbc172c.png",
+        "/lovable-uploads/044e4482-735e-4f46-90a9-f1f6a359235f.png"
+      ],
       isClickable: true,
       link: "/government-programme",
       isFeatured: true,
-      showComingSoon: true
+      showComingSoon: false
     },
     {
       title: "Building Inclusive Experiences Through Team Collaboration", 
@@ -59,6 +62,23 @@ const FeaturedWorkSection = () => {
                         {study.showComingSoon ? (
                           <div className="flex items-center justify-center h-full">
                             <span className="text-muted-foreground text-lg font-medium">Image updating</span>
+                          </div>
+                        ) : study.images ? (
+                          <div className="grid grid-cols-2 gap-2 h-full w-full">
+                            {study.images.map((img, imgIndex) => (
+                              <div key={imgIndex} className={study.isFeatured ? 'relative' : ''}>
+                                {study.isFeatured && (
+                                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-lg blur-sm"></div>
+                                )}
+                                <img 
+                                  src={img} 
+                                  alt={`${study.title} - Image ${imgIndex + 1}`}
+                                  className={`w-full h-full object-cover rounded-lg shadow-md ${
+                                    study.isFeatured ? 'relative shadow-lg' : ''
+                                  }`}
+                                />
+                              </div>
+                            ))}
                           </div>
                         ) : (
                           <div className={study.isFeatured ? 'relative' : ''}>
