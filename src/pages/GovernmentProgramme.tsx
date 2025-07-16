@@ -34,8 +34,30 @@ const GovernmentProgramme = () => {
                 </div>
               </div>
               <div className="flex justify-center lg:justify-end">
-                <div className="relative bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-16 flex items-center justify-center min-h-[300px]">
-                  <span className="text-muted-foreground text-xl font-medium">Image updating</span>
+                <div className="grid grid-cols-1 gap-4 w-full max-w-md">
+                  <div className="relative">
+                    <img 
+                      src="/lovable-uploads/e8a6ae98-73db-46ff-9d03-2fb04a14cebd.png" 
+                      alt="Information barriers and digital overwhelm infographic"
+                      className="w-full rounded-lg shadow-lg"
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="relative">
+                      <img 
+                        src="/lovable-uploads/f236cf84-f3d3-40ab-bae8-dc3ec9dd79d2.png" 
+                        alt="Participant satisfaction statistics"
+                        className="w-full rounded-lg shadow-lg"
+                      />
+                    </div>
+                    <div className="relative">
+                      <img 
+                        src="/lovable-uploads/2685dac9-57fa-4051-9658-2e01da3c323c.png" 
+                        alt="Certification benefits for coaches"
+                        className="w-full rounded-lg shadow-lg"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
