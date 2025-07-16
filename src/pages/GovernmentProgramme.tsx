@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -22,7 +21,7 @@ const GovernmentProgramme = () => {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
-                  Designing for Impact
+                  Led the team to create a learning experience for people we knew nothing about
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                   How I transformed a 3-month government programme from an impossible deadline into a measurable success story
@@ -89,7 +88,7 @@ const GovernmentProgramme = () => {
             <h2 className="text-3xl font-bold text-foreground mb-8">The Challenge: Mission Impossible Timeline</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground mb-6 text-lg">
-                <em>January 2025.</em> We'd just won a government contract with Innovate UK to train 30 specialist coaches in digital safety and psychology of change. The catch? We had exactly 3 months to go from zero to fully operational programme. I was the sole designer and there were 8 of us.
+                <em>January 2025.</em> We'd just won a government contract with Innovate UK to train 30 expert coaches in digital safety and psychology of change. The catch? We had exactly 3 months to go from zero to fully operational programme. I was the sole designer and there were 8 of us.
               </p>
               
               <div className="bg-white p-6 rounded-lg shadow-md mb-8">

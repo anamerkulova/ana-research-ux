@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const FeaturedWorkSection = () => {
   const caseStudies = [
     {
-      title: "Designing for Impact: From Chaos to Capability",
+      title: "Led the team to create a learning experience for people we knew nothing about",
       description: "How I transformed a 3-month government programme from an impossible deadline into a measurable success story—recruiting and training 30 coaches while building organizational design capability.",
       tags: ["Government Programme", "Service Design", "People Experience"],
       image: "/lovable-uploads/33313e3f-ef75-47fc-9d3a-30d8db86df37.png",
