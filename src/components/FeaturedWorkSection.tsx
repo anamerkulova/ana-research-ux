@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -64,9 +63,9 @@ const FeaturedWorkSection = () => {
                             <span className="text-muted-foreground text-lg font-medium">Image updating</span>
                           </div>
                         ) : study.images ? (
-                          <div className="grid grid-cols-2 gap-2 h-full w-full">
+                          <div className="flex gap-2 h-full w-full">
                             {study.images.map((img, imgIndex) => (
-                              <div key={imgIndex} className={study.isFeatured ? 'relative' : ''}>
+                              <div key={imgIndex} className={`flex-1 relative ${study.isFeatured ? 'relative' : ''}`}>
                                 {study.isFeatured && (
                                   <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-lg blur-sm"></div>
                                 )}
