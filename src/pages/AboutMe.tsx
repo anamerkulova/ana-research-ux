@@ -450,25 +450,25 @@ const AboutMe = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-primary">
+        <section className="py-20 bg-muted/40">
           <div className="container-width section-padding">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Let's Learn Together
               </h2>
-              <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 I love talking about books, sharing learning resources, and discussing how psychology principles apply to design challenges.
               </p>
-              
-              <div className="space-y-4 text-primary-foreground/80 mb-8">
+
+              <div className="space-y-4 text-muted-foreground mb-8">
                 <p>📚 Book recommendations? Send them my way!</p>
                 <p>🎓 Learning goals discussion? Let's chat!</p>
                 <p>🧠 Psychology + UX questions? Happy to explore together!</p>
               </div>
-              
-              <Button 
-                size="lg" 
-                className="bg-secondary hover:bg-coral-600 text-white px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105"
+
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105"
                 asChild
               >
                 <a 
