@@ -1,20 +1,21 @@
 
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleWorkClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    
+
     // If we're not on the homepage, navigate there first
     if (location.pathname !== '/') {
-      window.location.href = '/#work';
+      navigate('/');
       return;
     }
-    
+
     // If we're on the homepage, scroll to the work section
     const workSection = document.querySelector('#work');
     if (workSection) {
@@ -23,9 +24,8 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { name: 'Work', href: '#work', isInternal: false, onClick: handleWorkClick },
+    { name: 'Work', href: '/', isInternal: false, onClick: handleWorkClick },
     { name: 'About Me', href: '/about', isInternal: true },
-    { name: 'Contact', href: '#contact', isInternal: false },
   ];
 
   return (

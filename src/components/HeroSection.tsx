@@ -29,14 +29,14 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-primary font-semibold mb-8 leading-relaxed">
-                UX Designer × Psychology Expert × People Experience Strategist
+                Experience Designer · Educational Psychology · Service Design
               </p>
-              
+
               <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-                I design experiences that help people grow—whether they're users, employees, 
-                or learners. With a foundation in educational psychology and 2 years of UX 
-                experience, I bring unique insight into how people learn, adapt, and thrive 
-                in digital spaces.
+                I came to design by watching teachers and students struggle with tools that
+                weren't built for them. Since then I've worked across UX, service design, and
+                research, designing for learners, vulnerable populations, and professional
+                communities. I'm drawn to complex systems and the people inside them.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
