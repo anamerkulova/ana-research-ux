@@ -65,26 +65,6 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Custom portfolio colors
-				teal: {
-					50: 'hsl(var(--teal-50))',
-					100: 'hsl(var(--teal-100))',
-					600: 'hsl(var(--teal-600))',
-					700: 'hsl(var(--teal-700))',
-				},
-				coral: {
-					100: 'hsl(var(--coral-100))',
-					500: 'hsl(var(--coral-500))',
-					600: 'hsl(var(--coral-600))',
-				},
-				'custom-gray': {
-					50: 'hsl(var(--gray-50))',
-					100: 'hsl(var(--gray-100))',
-					200: 'hsl(var(--gray-200))',
-					600: 'hsl(var(--gray-600))',
-					700: 'hsl(var(--gray-700))',
-					900: 'hsl(var(--gray-900))',
 				}
 			},
 			borderRadius: {

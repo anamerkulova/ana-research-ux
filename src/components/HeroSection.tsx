@@ -14,9 +14,9 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-teal-100 rounded-full opacity-50 animate-float"></div>
-        <div className="absolute bottom-32 right-16 w-24 h-24 bg-coral-100 rounded-full opacity-60 animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-accent rounded-full opacity-40 animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-accent rounded-full opacity-70 animate-float"></div>
+        <div className="absolute bottom-32 right-16 w-24 h-24 bg-secondary rounded-full opacity-70 animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-accent rounded-full opacity-50 animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="container-width section-padding">
@@ -40,26 +40,22 @@ const HeroSection = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-teal-700 text-primary-foreground px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105"
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105"
                   onClick={handleViewWorkClick}
                 >
                   View My Work
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 text-lg font-medium transition-all duration-300"
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg font-medium transition-all duration-300"
                   asChild
                 >
                   <Link to="/about">About Me</Link>
                 </Button>
               </div>
-              
-              <p className="text-sm text-muted-foreground mt-6 italic">
-                As part of personal development I am building this portfolio on a no-code tool. It is certainly a work in progress (aren't we all?)
-              </p>
             </div>
 
             {/* Professional headshot */}

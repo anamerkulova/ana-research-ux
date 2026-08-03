@@ -19,17 +19,17 @@ const OverviewSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-custom-gray-50">
+    <section className="py-20 bg-muted/40">
       <div className="container-width section-padding">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-custom-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Where Psychology Meets Design
             </h2>
-            <p className="text-lg text-custom-gray-600 max-w-3xl mx-auto leading-relaxed">
-              My unique background in psychology provides the foundation for creating digital experiences 
-              that truly understand and serve human needs. Every pixel is placed with intention, 
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              My unique background in psychology provides the foundation for creating digital experiences
+              that truly understand and serve human needs. Every pixel is placed with intention,
               every interaction designed with empathy.
             </p>
           </div>
@@ -41,10 +41,10 @@ const OverviewSection = () => {
                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                   <div className="text-5xl mb-4">{feature.icon}</div>
                 </div>
-                <h3 className="text-xl font-semibold text-custom-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-foreground mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-custom-gray-600 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>

@@ -1,169 +1,101 @@
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 
 const FeaturedWorkSection = () => {
-  const caseStudies = [
+  const projects = [
     {
-      title: "Led the team to create a learning experience for people we knew nothing about",
-      description: "How I transformed a 3-month government programme from an impossible deadline into a measurable success story—recruiting and training 30 coaches while building organizational design capability.",
-      tags: ["Government Programme", "Service Design", "People Experience"],
-      images: [
-        "/lovable-uploads/8f142008-9ff9-4c7e-bcf5-625a7dbc172c.png",
-        "/lovable-uploads/044e4482-735e-4f46-90a9-f1f6a359235f.png"
-      ],
-      isClickable: true,
-      link: "/government-programme",
-      isFeatured: true,
-      showComingSoon: false
+      title: 'UX for Change Fellowship',
+      subheading: 'Leading design through ambiguity.',
+      tags: ['Service design', 'UX', 'design leadership', 'regenerative and trauma-informed design'],
+      link: '/ux-for-change',
+      isComingSoon: false,
     },
     {
-      title: "Building Inclusive Experiences Through Team Collaboration", 
-      description: "Designing accessible volunteer platform filters while navigating technical constraints and building stakeholder alignment across a cross-functional team.",
-      tags: ["Scottish Tech Army", "Accessibility", "Team Collaboration"],
-      image: "/lovable-uploads/645121d5-cdcb-4712-8105-50dd911f48b3.png",
-      isClickable: true,
-      link: "/scottish-tech-army",
-      showComingSoon: true
+      title: 'Project Two',
+      subheading: 'Coming soon.',
+      tags: [],
+      link: null,
+      isComingSoon: true,
     },
     {
-      title: "Instarem UX/UI Product Internship",
-      description: "Redesigning card linking experiences and developing key features for a fintech platform used by millions. Led user research, created design systems, and collaborated with engineering teams.",
-      tags: ["Fintech", "Product Design", "Mobile UX"],
-      image: "/lovable-uploads/8237da60-5fe4-48a0-b668-06e1169deee1.png",
-      isClickable: true,
-      link: "/instarem",
-      showComingSoon: false
-    }
+      title: 'Project Three',
+      subheading: 'Coming soon.',
+      tags: [],
+      link: null,
+      isComingSoon: true,
+    },
   ];
 
   return (
     <section id="work" className="py-20">
       <div className="container-width section-padding">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-16">
-            Recent Work
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-16 max-w-3xl mx-auto leading-tight">
+            UX and service design for systems that help people learn and grow.
           </h2>
-          
+
           <div className="grid lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => {
-              if (study.isClickable) {
-                return (
-                  <Link key={index} to={study.link}>
-                    <Card className={`border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer ${
-                      study.isFeatured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5' : ''
-                    }`}>
-                      <div className={`aspect-video bg-gradient-to-br rounded-t-lg flex items-center justify-center overflow-hidden p-4 ${
-                        study.isFeatured 
-                          ? 'from-primary/20 via-secondary/15 to-accent/20' 
-                          : 'from-teal-100 to-coral-100'
-                      }`}>
-                        {study.showComingSoon ? (
-                          <div className="flex items-center justify-center h-full">
-                            <span className="text-muted-foreground text-lg font-medium">Image updating</span>
-                          </div>
-                        ) : study.images ? (
-                          <div className="flex gap-2 h-full w-full">
-                            {study.images.map((img, imgIndex) => (
-                              <div key={imgIndex} className={`flex-1 relative ${study.isFeatured ? 'relative' : ''}`}>
-                                {study.isFeatured && (
-                                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-lg blur-sm"></div>
-                                )}
-                                <img 
-                                  src={img} 
-                                  alt={`${study.title} - Image ${imgIndex + 1}`}
-                                  className={`w-full h-full object-cover rounded-lg shadow-md ${
-                                    study.isFeatured ? 'relative shadow-lg' : ''
-                                  }`}
-                                />
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className={study.isFeatured ? 'relative' : ''}>
-                            {study.isFeatured && (
-                              <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-lg blur-sm"></div>
-                            )}
-                            <img 
-                              src={study.image} 
-                              alt={study.title}
-                              className={`max-w-full max-h-full object-contain rounded-lg shadow-md ${
-                                study.isFeatured ? 'relative shadow-lg' : ''
-                              }`}
-                            />
-                          </div>
-                        )}
-                      </div>
-                      <CardContent className="p-6">
-                        {study.isFeatured && (
-                          <div className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full mb-3">
-                            FEATURED
-                          </div>
-                        )}
-                        <h3 className={`text-xl font-semibold mb-3 group-hover:text-primary transition-colors ${
-                          study.isFeatured ? 'text-foreground' : 'text-foreground'
-                        }`}>
-                          {study.title}
-                        </h3>
-                        <p className="text-muted-foreground mb-4 leading-relaxed">
-                          {study.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {study.tags.map((tag, tagIndex) => (
-                            <span 
-                              key={tagIndex}
-                              className={`px-3 py-1 text-sm rounded-full font-medium ${
-                                study.isFeatured 
-                                  ? 'bg-primary/15 text-primary' 
-                                  : 'bg-accent/20 text-primary'
-                              }`}
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        <span className="text-primary hover:text-secondary font-medium">
-                          {study.showComingSoon ? 'Image updating →' : 'View Case Study →'}
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                );
-              } else {
-                return (
-                  <div key={index}>
-                    <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
-                      <div className="aspect-video bg-gradient-to-br from-teal-100 to-coral-100 rounded-t-lg flex items-center justify-center">
-                        <span className="text-muted-foreground font-medium">Project Visual</span>
-                      </div>
-                      <CardContent className="p-6">
-                        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                          {study.title}
-                        </h3>
-                        <p className="text-muted-foreground mb-4 leading-relaxed">
-                          {study.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {study.tags.map((tag, tagIndex) => (
-                            <span 
-                              key={tagIndex}
-                              className="px-3 py-1 bg-accent/20 text-primary text-sm rounded-full font-medium"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        <Button 
-                          variant="link" 
-                          className="p-0 h-auto text-primary hover:text-secondary font-medium"
-                        >
-                          View Case Study →
-                        </Button>
-                      </CardContent>
-                    </Card>
+            {projects.map((project, index) => {
+              const cardContent = (
+                <Card
+                  className={`h-full border-none shadow-lg transition-all duration-300 ${
+                    project.isComingSoon
+                      ? 'opacity-70'
+                      : 'hover:shadow-xl transform hover:-translate-y-1 group cursor-pointer ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-accent'
+                  }`}
+                >
+                  <div
+                    className={`aspect-video rounded-t-lg flex items-center justify-center ${
+                      project.isComingSoon ? 'bg-muted' : 'bg-gradient-to-br from-primary/15 via-accent to-secondary/40'
+                    }`}
+                  >
+                    {project.isComingSoon ? (
+                      <span className="text-muted-foreground text-lg font-medium">Coming soon</span>
+                    ) : (
+                      <span className="text-primary text-lg font-semibold px-6 text-center">
+                        {project.title}
+                      </span>
+                    )}
                   </div>
-                );
-              }
+                  <CardContent className="p-6">
+                    <h3
+                      className={`text-xl font-semibold mb-2 ${
+                        project.isComingSoon ? 'text-muted-foreground' : 'text-foreground group-hover:text-primary transition-colors'
+                      }`}
+                    >
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                      {project.subheading}
+                    </p>
+                    {project.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-3 py-1 text-sm rounded-full font-medium bg-secondary text-secondary-foreground"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {!project.isComingSoon && (
+                      <span className="text-primary font-medium">
+                        View Case Study →
+                      </span>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+
+              return project.link ? (
+                <Link key={index} to={project.link}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <div key={index}>{cardContent}</div>
+              );
             })}
           </div>
         </div>
