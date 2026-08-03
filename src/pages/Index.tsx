@@ -2,7 +2,7 @@
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import FeaturedWorkSection from '@/components/FeaturedWorkSection';
-import OverviewSection from '@/components/OverviewSection';
+import WorkTogetherSection from '@/components/WorkTogetherSection';
 
 const Index = () => {
   return (
@@ -11,7 +11,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <FeaturedWorkSection />
-        <OverviewSection />
+        <WorkTogetherSection />
       </main>
     </div>
   );
