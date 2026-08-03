@@ -28,7 +28,7 @@ const AboutMe = () => {
                 <div className="flex justify-center lg:justify-end">
                   <div className="w-80 h-80 rounded-full overflow-hidden shadow-lg">
                     <img 
-                      src="/lovable-uploads/ae33615f-fc4f-4e31-9b17-0ff3d314310d.png" 
+                      src={`${import.meta.env.BASE_URL}lovable-uploads/ae33615f-fc4f-4e31-9b17-0ff3d314310d.png`}
                       alt="Ana Merkulova outdoors with scarf"
                       className="w-full h-full object-cover"
                     />
@@ -73,7 +73,7 @@ const AboutMe = () => {
                 <div className="flex justify-center">
                   <div className="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="/lovable-uploads/f18bddae-3053-4b9b-aa65-b5ce8b6cb2ef.png" 
+                      src={`${import.meta.env.BASE_URL}lovable-uploads/f18bddae-3053-4b9b-aa65-b5ce8b6cb2ef.png`} 
                       alt="Ana working on design sketches"
                       className="w-full h-full object-cover"
                     />
