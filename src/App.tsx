@@ -16,7 +16,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/ana-merk-ux-flow">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutMe />} />

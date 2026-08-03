@@ -62,7 +62,7 @@ const HeroSection = () => {
             <div className="order-1 lg:order-2 flex justify-center">
               <div className="w-80 h-80 rounded-full overflow-hidden shadow-lg">
                 <img 
-                  src="/lovable-uploads/9dfa6111-94fa-4c6c-985c-fc3687c5055e.png" 
+                  src={`${import.meta.env.BASE_URL}lovable-uploads/9dfa6111-94fa-4c6c-985c-fc3687c5055e.png`}
                   alt="Ana Merkulova professional headshot"
                   className="w-full h-full object-cover"
                 />
