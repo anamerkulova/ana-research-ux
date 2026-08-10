@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import { ExternalLink } from 'lucide-react';
 
 const FeaturedWorkSection = () => {
   const projects = [
@@ -20,11 +21,11 @@ const FeaturedWorkSection = () => {
     {
       title: 'Other UX Projects',
       subheading: 'More of my case studies and visual work.',
-      tags: [],
+      tags: ['UX/UI', 'Framer', 'volunteering and education'],
       link: 'https://anamerkulovaux.framer.website/',
       isExternal: true,
       isComingSoon: false,
-      ctaLabel: 'Visit →',
+      ctaLabel: 'Visit',
     },
   ];
 
@@ -43,18 +44,26 @@ const FeaturedWorkSection = () => {
                   className={`h-full border-none shadow-lg transition-all duration-300 ${
                     project.isComingSoon
                       ? 'opacity-70'
+                      : project.isExternal
+                      ? 'hover:shadow-xl transform hover:-translate-y-1 group cursor-pointer bg-card border border-border'
                       : 'hover:shadow-xl transform hover:-translate-y-1 group cursor-pointer ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-accent'
                   }`}
                 >
                   <div
                     className={`aspect-video rounded-t-lg flex items-center justify-center ${
-                      project.isComingSoon ? 'bg-muted' : 'bg-gradient-to-br from-primary/15 via-accent to-secondary/40'
+                      project.isComingSoon || project.isExternal
+                        ? 'bg-muted'
+                        : 'bg-gradient-to-br from-primary/15 via-accent to-secondary/40'
                     }`}
                   >
                     {project.isComingSoon ? (
                       <span className="text-muted-foreground text-lg font-medium">Coming soon</span>
                     ) : (
-                      <span className="text-primary text-lg font-semibold px-6 text-center">
+                      <span
+                        className={`text-lg font-semibold px-6 text-center ${
+                          project.isExternal ? 'text-foreground' : 'text-primary'
+                        }`}
+                      >
                         {project.title}
                       </span>
                     )}
@@ -83,8 +92,18 @@ const FeaturedWorkSection = () => {
                       </div>
                     )}
                     {!project.isComingSoon && (
-                      <span className="text-primary font-medium">
-                        {project.ctaLabel ?? 'View Case Study →'}
+                      <span className="text-primary font-medium inline-flex items-center gap-1.5">
+                        {project.ctaLabel ?? 'View Case Study'}
+                        {project.isExternal ? (
+                          <>
+                            <ExternalLink className="h-4 w-4" />
+                            <span className="text-muted-foreground font-normal text-sm">
+                              (opens in a new window)
+                            </span>
+                          </>
+                        ) : (
+                          ' →'
+                        )}
                       </span>
                     )}
                   </CardContent>
