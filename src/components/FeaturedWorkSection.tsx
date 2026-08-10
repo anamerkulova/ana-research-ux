@@ -18,11 +18,13 @@ const FeaturedWorkSection = () => {
       isComingSoon: false,
     },
     {
-      title: 'Project Three',
-      subheading: 'Coming soon.',
+      title: 'Other UX Projects',
+      subheading: 'More of my case studies and visual work.',
       tags: [],
-      link: null,
-      isComingSoon: true,
+      link: 'https://anamerkulovaux.framer.website/',
+      isExternal: true,
+      isComingSoon: false,
+      ctaLabel: 'Visit →',
     },
   ];
 
@@ -82,12 +84,20 @@ const FeaturedWorkSection = () => {
                     )}
                     {!project.isComingSoon && (
                       <span className="text-primary font-medium">
-                        View Case Study →
+                        {project.ctaLabel ?? 'View Case Study →'}
                       </span>
                     )}
                   </CardContent>
                 </Card>
               );
+
+              if (project.isExternal && project.link) {
+                return (
+                  <a key={index} href={project.link} target="_blank" rel="noopener noreferrer">
+                    {cardContent}
+                  </a>
+                );
+              }
 
               return project.link ? (
                 <Link key={index} to={project.link}>
