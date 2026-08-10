@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import WorkTogetherSection from '@/components/WorkTogetherSection';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award, User } from 'lucide-react';
+import { Award, GraduationCap, User } from 'lucide-react';
 
 const AboutMe = () => {
   return (
@@ -84,50 +84,96 @@ const AboutMe = () => {
           </div>
         </section>
 
-        {/* Certifications Section */}
+        {/* Education & Certifications Section */}
         <section className="py-20 bg-muted/30">
           <div className="container-width section-padding">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-3 mb-12">
                 <Award className="h-8 w-8 text-primary" />
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                  Certifications & Courses
+                  Education & Certifications
                 </h2>
               </div>
 
-              <Card className="hover:shadow-lg transition-shadow max-w-3xl mx-auto">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Badge className="bg-green-500 text-white">Completed</Badge>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                      🏆 School of UX - 7-Week UX Skills Bootcamp (2023)
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Government-funded intensive program covering:
-                    </p>
-                    <ul className="text-sm text-foreground space-y-1">
-                      <li>• User research methods</li>
-                      <li>• Wireframing and prototyping</li>
-                      <li>• Usability testing</li>
-                      <li>• Design systems</li>
-                      <li>• Behavioral psychology in UX</li>
-                    </ul>
-                  </div>
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Education */}
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <GraduationCap className="h-5 w-5 text-primary" />
+                      Education
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-1">
+                        BA (Hons) Educational Psychology
+                      </h4>
+                      <p className="text-sm text-muted-foreground">Moscow State University, 2006–2011</p>
+                    </div>
 
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-foreground mb-2">✅ UXcel</h4>
-                    <ul className="text-sm text-foreground space-y-1">
-                      <li>- Product Management course (2025)</li>
-                      <li>- Accessibility course (2024)</li>
-                      <li>- Service Design course (2024)</li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-1">UX Design Certification</h4>
+                      <p className="text-sm text-muted-foreground">DesignLab, 2021–2022</p>
+                    </div>
+
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-1">
+                        Regenerative Design Leadership
+                      </h4>
+                      <p className="text-sm text-muted-foreground">UX for Change, 2025</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Certifications */}
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Badge className="bg-green-500 text-white">Certifications</Badge>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                        🏆 School of UX - 7-Week UX Skills Bootcamp (2023)
+                      </h4>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Government-funded intensive program covering:
+                      </p>
+                      <ul className="text-sm text-foreground space-y-1">
+                        <li>• User research methods</li>
+                        <li>• Wireframing and prototyping</li>
+                        <li>• Usability testing</li>
+                        <li>• Design systems</li>
+                        <li>• Behavioral psychology in UX</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-2">Automations for Business Leaders</h4>
+                      <p className="text-sm text-muted-foreground">2025</p>
+                    </div>
+
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-2">LinkedIn Learning</h4>
+                      <ul className="text-sm text-foreground space-y-1">
+                        <li>- Designing for Digital Accessibility in Online Learning</li>
+                        <li>- Inclusive Typography</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-2">✅ UXcel</h4>
+                      <ul className="text-sm text-foreground space-y-1">
+                        <li>- Product Management course (2025)</li>
+                        <li>- Accessibility course (2024)</li>
+                        <li>- Service Design course (2024)</li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
