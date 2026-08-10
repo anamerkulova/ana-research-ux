@@ -11,11 +11,11 @@ const FeaturedWorkSection = () => {
       isComingSoon: false,
     },
     {
-      title: 'Project Two',
-      subheading: 'Coming soon.',
-      tags: [],
-      link: null,
-      isComingSoon: true,
+      title: 'MindHug',
+      subheading: 'Building design influence from scratch.',
+      tags: ['Government Programme', 'Service Design', 'UX and Learning Design'],
+      link: '/mindhug',
+      isComingSoon: false,
     },
     {
       title: 'Project Three',
