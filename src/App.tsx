@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/ana-service-ux">
+      <BrowserRouter basename="/ana-research-ux">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutMe />} />
