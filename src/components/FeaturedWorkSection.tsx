@@ -1,31 +1,44 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ExternalLink } from 'lucide-react';
+import { Image as ImageIcon } from 'lucide-react';
 
 const FeaturedWorkSection = () => {
   const projects = [
     {
-      title: 'UX for Change Fellowship',
-      subheading: 'Leading design through ambiguity.',
-      tags: ['Service design', 'UX', 'design leadership', 'regenerative and trauma-informed design'],
+      number: '1',
+      label: 'With teachers of English as a Foreign Language.',
+      question: 'When are AI-created materials helpful or harmful?',
+      description:
+        "This is an exploration of cognitive offloading during my Masters in Education and Technology at UCL. I created a choose-your-own adventure prototype for sense-making of teachers' language modeling in a classroom.",
+      tags: ['Prototyping', 'Testing', 'Iteration'],
+      link: null,
+    },
+    {
+      number: '2',
+      label: 'With vulnerable people.',
+      question: 'How to move from research to ideation in an ethically sensitive field?',
+      description:
+        'I led three designers from research to the creation of the first prototype. After our co-imagination workshop with domestic violence survivors, we were faced with the challenge of choosing a path for designing a prototype, letting go of other possible solutions.',
+      tags: ['Qualitative research', 'Workshop', 'Usability testing', 'Pattern analysis'],
       link: '/ux-for-change',
-      isComingSoon: false,
     },
     {
-      title: 'MindHug',
-      subheading: 'Building design influence from scratch.',
-      tags: ['Government Programme', 'Service Design', 'UX and Learning Design'],
+      number: '3',
+      label: 'With non-technical trainees in a learning programme.',
+      question: 'What research to choose with a team working on a 3-month government deadline?',
+      description:
+        "The team started with building content for the programme, so quick understanding of the learners was needed to align the team on learners' needs and intended outcomes of this short programme.",
+      tags: ['Interview', 'Survey', 'Storymapping'],
       link: '/mindhug',
-      isComingSoon: false,
     },
     {
-      title: 'Other UX Projects',
-      subheading: 'More of my case studies and visual work.',
-      tags: ['UX/UI', 'Framer', 'volunteering and education'],
-      link: 'https://anamerkulovaux.framer.website/',
-      isExternal: true,
-      isComingSoon: false,
-      ctaLabel: 'Visit',
+      number: '4',
+      label: 'With trauma-informed workshop attendees and facilitators.',
+      question: 'How to ensure a facilitation tool works for participants?',
+      description:
+        "I have taken the 'social battery' tool and researched how and why it works, tested it with workshop participants and created a facilitator's guide.",
+      tags: ['Usability testing', 'Desk research'],
+      link: null,
     },
   ];
 
@@ -33,97 +46,56 @@ const FeaturedWorkSection = () => {
     <section id="work" className="py-20">
       <div className="container-width section-padding">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-16 max-w-3xl mx-auto leading-tight">
-            UX and service design for systems that help people learn and grow.
+          <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-12 max-w-2xl">
+            I conduct research to inform design:
           </h2>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => {
+          <div className="grid md:grid-cols-2 gap-8">
+            {projects.map((project) => {
               const cardContent = (
                 <Card
-                  className={`h-full border-none shadow-lg transition-all duration-300 ${
-                    project.isComingSoon
-                      ? 'opacity-70'
-                      : project.isExternal
-                      ? 'hover:shadow-xl transform hover:-translate-y-1 group cursor-pointer bg-card border border-border'
-                      : 'hover:shadow-xl transform hover:-translate-y-1 group cursor-pointer ring-2 ring-primary/20 bg-gradient-to-br from-primary/5 to-accent'
+                  className={`h-full border border-border shadow-none transition-shadow duration-300 ${
+                    project.link ? 'hover:shadow-md cursor-pointer' : ''
                   }`}
                 >
-                  <div
-                    className={`aspect-video rounded-t-lg flex items-center justify-center ${
-                      project.isComingSoon || project.isExternal
-                        ? 'bg-muted'
-                        : 'bg-gradient-to-br from-primary/15 via-accent to-secondary/40'
-                    }`}
-                  >
-                    {project.isComingSoon ? (
-                      <span className="text-muted-foreground text-lg font-medium">Coming soon</span>
-                    ) : (
-                      <span
-                        className={`text-lg font-semibold px-6 text-center ${
-                          project.isExternal ? 'text-foreground' : 'text-primary'
-                        }`}
-                      >
-                        {project.title}
-                      </span>
-                    )}
+                  <div className="aspect-video bg-muted rounded-t-lg flex items-center justify-center">
+                    <ImageIcon className="h-8 w-8 text-muted-foreground/30" />
                   </div>
                   <CardContent className="p-6">
-                    <h3
-                      className={`text-xl font-semibold mb-2 ${
-                        project.isComingSoon ? 'text-muted-foreground' : 'text-foreground group-hover:text-primary transition-colors'
-                      }`}
-                    >
-                      {project.title}
+                    <p className="text-sm font-medium text-muted-foreground mb-3">
+                      {project.number}. {project.label}
+                    </p>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 leading-snug">
+                      {project.question}
                     </h3>
                     <p className="text-muted-foreground mb-4 leading-relaxed">
-                      {project.subheading}
+                      {project.description}
                     </p>
-                    {project.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tags.map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="px-3 py-1 text-sm rounded-full font-medium bg-secondary text-secondary-foreground"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    {!project.isComingSoon && (
-                      <span className="text-primary font-medium inline-flex items-center gap-1.5">
-                        {project.ctaLabel ?? 'View Case Study'}
-                        {project.isExternal ? (
-                          <>
-                            <ExternalLink className="h-4 w-4" />
-                            <span className="text-muted-foreground font-normal text-sm">
-                              (opens in a new window)
-                            </span>
-                          </>
-                        ) : (
-                          ' →'
-                        )}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 text-xs rounded-full font-medium bg-muted text-foreground border border-border"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    {project.link && (
+                      <span className="text-foreground font-medium">
+                        View Case Study →
                       </span>
                     )}
                   </CardContent>
                 </Card>
               );
 
-              if (project.isExternal && project.link) {
-                return (
-                  <a key={index} href={project.link} target="_blank" rel="noopener noreferrer">
-                    {cardContent}
-                  </a>
-                );
-              }
-
               return project.link ? (
-                <Link key={index} to={project.link}>
+                <Link key={project.number} to={project.link}>
                   {cardContent}
                 </Link>
               ) : (
-                <div key={index}>{cardContent}</div>
+                <div key={project.number}>{cardContent}</div>
               );
             })}
           </div>
