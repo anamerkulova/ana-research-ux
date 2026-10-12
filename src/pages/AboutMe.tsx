@@ -16,7 +16,7 @@ const AboutMe = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Photo */}
                 <div className="flex justify-center lg:justify-start">
-                  <div className="w-full max-w-sm rounded-lg overflow-hidden shadow-lg">
+                  <div className="w-full max-w-[260px] rounded-lg overflow-hidden shadow-lg">
                     <img
                       src={`${import.meta.env.BASE_URL}lovable-uploads/9dfa6111-94fa-4c6c-985c-fc3687c5055e.png`}
                       alt="Ana Merkulova professional headshot"
