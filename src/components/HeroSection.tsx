@@ -16,7 +16,7 @@ const HeroSection = () => {
               Ana Merkulova
             </p>
             <p className="text-lg text-muted-foreground">
-              UX Researcher applying psychology and theories of learning.
+              UX researcher specialising in trauma-informed design with learners and educators.
             </p>
           </div>
         </div>
