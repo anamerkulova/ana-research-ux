@@ -59,21 +59,26 @@ const FeaturedWorkSection = () => {
                     project.link ? 'hover:shadow-md cursor-pointer' : ''
                   }`}
                 >
-                  <div className="aspect-video bg-muted rounded-t-lg flex items-center justify-center overflow-hidden">
+                  <div className="px-6 pt-5 pb-4">
+                    <span className="inline-block px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
+                      {project.label}
+                    </span>
+                  </div>
+                  <div className="relative aspect-video bg-muted flex items-center justify-center overflow-hidden">
                     {project.image ? (
-                      <img
-                        src={`${import.meta.env.BASE_URL}lovable-uploads/${project.image}`}
-                        alt={project.question}
-                        className="w-full h-full object-cover"
-                      />
+                      <>
+                        <img
+                          src={`${import.meta.env.BASE_URL}lovable-uploads/${project.image}`}
+                          alt={project.question}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/20" />
+                      </>
                     ) : (
                       <ImageIcon className="h-8 w-8 text-muted-foreground/30" />
                     )}
                   </div>
                   <CardContent className="p-6">
-                    <p className="text-sm font-medium text-muted-foreground mb-3">
-                      {project.number}. {project.label}
-                    </p>
                     <h3 className="text-xl font-semibold text-foreground mb-3 leading-snug">
                       {project.question}
                     </h3>
