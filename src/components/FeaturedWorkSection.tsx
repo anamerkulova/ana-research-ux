@@ -77,13 +77,9 @@ const FeaturedWorkSection = () => {
   ];
 
   return (
-    <section id="work" className="py-20">
+    <section id="work" className="pt-0 pb-20">
       <div className="container-width section-padding">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-12 max-w-2xl">
-            I conduct research to inform design:
-          </h2>
-
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project) => {
               const accent = accentStyles[project.accent ?? 'purple'];
