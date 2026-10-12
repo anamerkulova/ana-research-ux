@@ -1,32 +1,43 @@
 import Navigation from '@/components/Navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Users, Clock, Target, Search, RefreshCw, GraduationCap, BarChart3 } from 'lucide-react';
+import {
+  ArrowLeft,
+  Users,
+  Clock,
+  FileText,
+  Search,
+  Lightbulb,
+  TrendingUp,
+  GraduationCap,
+} from 'lucide-react';
 
 const MindHug = () => {
-  const tags = ['Government Programme', 'Service Design', 'UX and Learning Design'];
+  const tags = ['Interview', 'Survey', 'Assessment'];
 
-  const whatIWouldChange = [
-    {
-      title: 'Introduce structure before tools',
-      body: "I reached for the service blueprint at the right moment, but without enough context for why it mattered. In a team with varying familiarity with design methods, the tool itself isn't enough. What the team needed first was a shared understanding of why making the system visible would help them. I'd spend more time now establishing that shared language and relationship before introducing any method — so that when the blueprint appeared, it felt like a solution to a problem the team already recognised, not a framework imposed from outside.",
-    },
-    {
-      title: 'Establish the connection between research and design earlier',
-      body: "I came in positioned at the edges — website, landing pages, visuals. Getting closer to the programme content required building trust and finding the right question to open the door. I did that, but it took time I didn't have to spare. What I'd do differently is name that connection explicitly from the start — not just do the research work, but make visible to the team why understanding the audience before writing content would make the programme stronger.",
-    },
+  const team = [
+    'Subject matter experts in psychology and cybersecurity',
+    'Marketing',
+    'Operations',
+    'CEO',
   ];
 
-  const learnings = [
-    {
-      title: "Research doesn't need to be perfect to be useful",
-      body: "The Q&A sessions weren't rigorous user interviews. We didn't have time for that. But they gave us enough signal to design something real rather than something assumed.",
-    },
-    {
-      title: "The hardest design problem wasn't the design",
-      body: "It was helping a team already in motion slow down long enough to look at who they were designing for. That required influence without authority — finding the right question, the right moment, the right person to bring alongside. That's a skill I didn't know I lacked at the start of the project, and the reason I went on to take part in UX for Change fellowship.",
-    },
+  const uncoveringMethods = [
+    'User interviews with experienced coaches: 5',
+    'Competitive landscape analysis',
+    'Q&A with potential participants',
+    'Screener survey',
+    "Consent forms: Informing explicitly about the use of people's data.",
   ];
+
+  const designingMethods = [
+    'SME interviews in two fields: Cybersecurity and Psychology',
+    'Diagnostic knowledge assessment: multiple-choice test',
+    'Likert scale: confidence self-assessment',
+    "Consent forms: Non-anonymous participants' data deleted after the programme.",
+  ];
+
+  const img = (name: string) => `${import.meta.env.BASE_URL}lovable-uploads/${name}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -45,10 +56,10 @@ const MindHug = () => {
                 MindHug
               </h1>
               <p className="text-xl md:text-2xl text-primary font-semibold mb-6">
-                Building design influence from scratch.
+                What research to choose with a new team working on a 3-month government deadline?
               </p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-8">
                 {tags.map((tag) => (
                   <span
                     key={tag}
@@ -58,6 +69,14 @@ const MindHug = () => {
                   </span>
                 ))}
               </div>
+
+              <div className="rounded-lg overflow-hidden shadow-md border border-border">
+                <img
+                  src={img('mindhug_workshop_photo.jpg')}
+                  alt="Team workshop session, faces anonymised, surrounded by notes and research materials"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -65,175 +84,253 @@ const MindHug = () => {
         {/* Overview */}
         <section className="py-20">
           <div className="container-width section-padding">
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-foreground leading-relaxed mb-6">
-                MindHug had a vision for a professional development programme training specialist coaches
-                to support organisations through cybersecurity incidents. I joined as a UX designer and
-                programme manager responsible for end-to-end design and programme delivery.
-              </p>
+            <div className="max-w-5xl mx-auto">
+              <div className="flex items-center gap-3 mb-8">
+                <FileText className="h-7 w-7 text-primary" />
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                  Overview
+                </h2>
+              </div>
 
-              <div className="grid md:grid-cols-3 gap-6 my-10">
-                <Card className="border-none shadow-md">
-                  <CardContent className="p-6 text-center">
-                    <Users className="h-7 w-7 mx-auto mb-3 text-primary" />
-                    <h3 className="font-semibold text-foreground mb-1">Team</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Subject matter experts, marketing, operations
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="border-none shadow-md">
-                  <CardContent className="p-6 text-center">
-                    <Clock className="h-7 w-7 mx-auto mb-3 text-primary" />
-                    <h3 className="font-semibold text-foreground mb-1">Time</h3>
-                    <p className="text-sm text-muted-foreground">3 month government deadline</p>
-                  </CardContent>
-                </Card>
-                <Card className="border-none shadow-md">
-                  <CardContent className="p-6 text-center">
-                    <Target className="h-7 w-7 mx-auto mb-3 text-primary" />
-                    <h3 className="font-semibold text-foreground mb-1">Outcomes</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Website and landing pages, design system, team coordination, and successful
-                      programme delivery measured beyond completion
-                    </p>
-                  </CardContent>
-                </Card>
+              <div className="grid lg:grid-cols-3 gap-10">
+                {/* Sidebar */}
+                <div className="order-2 lg:order-1 lg:col-span-1 space-y-6">
+                  <Card className="border-none shadow-md">
+                    <CardContent className="p-5">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Users className="h-5 w-5 text-primary" />
+                        <h3 className="font-semibold text-foreground">Team</h3>
+                      </div>
+                      <ul className="text-sm text-muted-foreground space-y-1.5">
+                        {team.map((member) => (
+                          <li key={member}>{member}</li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-none shadow-md">
+                    <CardContent className="p-5">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Clock className="h-5 w-5 text-primary" />
+                        <h3 className="font-semibold text-foreground">Time</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        3-month government deadline.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Main content */}
+                <div className="order-1 lg:order-2 lg:col-span-2 space-y-6">
+                  <p className="text-lg text-foreground leading-relaxed">
+                    MindHug had a vision for a professional development programme training
+                    specialist coaches to support organisations through cybersecurity incidents.
+                    Innovate UK (DSIT) acted as stakeholders on this project.
+                  </p>
+                  <p className="text-lg text-foreground leading-relaxed">
+                    I joined as a UX designer and researcher responsible for the programme's
+                    end-to-end design. MindHug needed a tested pilot programme that they could
+                    learn from and deliver to further cohorts of trainees.
+                  </p>
+                  <p className="text-lg text-foreground leading-relaxed">
+                    I worked with the subject matter experts and programme trainees. My work
+                    combined user research under a tight deadline, creating an assessment
+                    framework, and gathering feedback from the programme to iterate on its
+                    learning outcomes. This carried the programme from pilot to CPD accreditation.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Understanding the customer */}
+        {/* Uncovering the problem */}
         <section className="py-20 bg-muted/40">
           <div className="container-width section-padding">
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid lg:grid-cols-3 gap-10">
+                {/* Sidebar */}
+                <div className="order-2 lg:order-1 lg:col-span-1">
+                  <Card className="border-none shadow-md">
+                    <CardContent className="p-5">
+                      <h3 className="font-semibold text-foreground mb-3">Research activities</h3>
+                      <ul className="text-sm text-muted-foreground space-y-2">
+                        {uncoveringMethods.map((method) => (
+                          <li key={method}>{method}</li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Main content */}
+                <div className="order-1 lg:order-2 lg:col-span-2">
+                  <div className="flex items-center gap-3 mb-6">
                     <Search className="h-7 w-7 text-primary" />
                     <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                      Understanding the customer
+                      Uncovering the problem
                     </h2>
                   </div>
-                  <p className="text-lg text-foreground leading-relaxed">
-                    Subject matter experts were writing materials based on experience with university
-                    students — not the corporate coaches we were actually designing for. I mapped what the
-                    team thought they knew, identified the critical gaps, and designed Q&A sessions with
-                    prospective participants so the experts could hear directly from the people they'd
-                    never met. What we learned changed the content direction. Primarily, the coaches needed
-                    to navigate crisis conversations with clients, not absorb technical knowledge. This
-                    became the core need and informed the whole training.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
 
-        {/* Coordinating a remote team */}
-        <section className="py-20">
-          <div className="container-width section-padding">
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Users className="h-7 w-7 text-primary" />
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                      Coordinating a remote team
-                    </h2>
+                  <div className="space-y-6 mb-8">
+                    <p className="text-lg text-foreground leading-relaxed">
+                      Subject matter experts already had content based on experience with
+                      university students. For this particular programme, however, we were
+                      designing for corporate coaches.
+                    </p>
+                    <p className="text-lg text-foreground leading-relaxed">
+                      I led the team to map what we already knew and identify the critical gaps.
+                      Then I designed Q&A sessions with prospective participants so the experts
+                      could hear directly from the people they'd never met, what they were hoping
+                      to achieve with this training.
+                    </p>
+                    <p className="text-lg text-foreground leading-relaxed">
+                      Additionally, I conducted user interviews with experienced coaches who went
+                      through training in the past. What we learned helped us narrow down the
+                      content direction. The coaches needed to navigate conversations with clients
+                      around prevention or aftermath of cybersecurity incidents. They found it
+                      effective to learn through doing, in a discussion of real use-cases. This
+                      shaped the goal of the programme, as I illustrated in the storyboard for the
+                      team.
+                    </p>
                   </div>
-                  <p className="text-lg text-foreground leading-relaxed">
-                    I was part of a team distributed across different countries, new to each other, with
-                    often unclear responsibilities. I started with a customer journey map to make the
-                    programme visible. Then I added layers until it became a service blueprint, mapping
-                    what participants experienced front stage against what each team member needed to
-                    deliver backstage and by when. That blueprint became the team's shared reference point.
-                    With roles becoming clearer, the three-month deadline felt more manageable. The
-                    programme was delivered to thirty coaches on time, achieving high satisfaction scores.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
 
-        {/* Measuring success beyond completion */}
-        <section className="py-20 bg-muted/40">
-          <div className="container-width section-padding">
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <BarChart3 className="h-7 w-7 text-primary" />
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                      Measuring success beyond completion
-                    </h2>
+                  <div className="rounded-lg overflow-hidden shadow-md border border-border bg-white">
+                    <img
+                      src={img('mindhug_storyboard.png')}
+                      alt="Concept story storyboard mapping the target coach's journey from worry to confidence"
+                      className="w-full h-auto"
+                    />
                   </div>
-                  <p className="text-lg text-foreground leading-relaxed">
-                    Standard completion metrics wouldn't tell us whether the programme had actually worked.
-                    I built an evaluation framework combining knowledge assessments and qualitative
-                    interviews. This measured what participants knew, how confident they felt, and whether
-                    that confidence held beyond the programme. The coaches described themselves differently
-                    afterwards: less technophobic, more capable of navigating the conversations their
-                    clients needed them to have.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* What I would change */}
-        <section className="py-20">
-          <div className="container-width section-padding">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-center gap-3 mb-8">
-                <RefreshCw className="h-7 w-7 text-primary" />
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                  What I would change
-                </h2>
+                </div>
               </div>
-              <div className="space-y-6">
-                {whatIWouldChange.map((item) => (
-                  <Card key={item.title} className="border-none shadow-md">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-foreground leading-relaxed">{item.body}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Designing an experience for knowledge and confidence */}
+        <section className="py-20">
+          <div className="container-width section-padding">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid lg:grid-cols-3 gap-10">
+                {/* Sidebar */}
+                <div className="order-2 lg:order-1 lg:col-span-1">
+                  <Card className="border-none shadow-md">
+                    <CardContent className="p-5">
+                      <h3 className="font-semibold text-foreground mb-3">Research activities</h3>
+                      <ul className="text-sm text-muted-foreground space-y-2">
+                        {designingMethods.map((method) => (
+                          <li key={method}>{method}</li>
+                        ))}
+                      </ul>
                     </CardContent>
                   </Card>
-                ))}
+                </div>
+
+                {/* Main content */}
+                <div className="order-1 lg:order-2 lg:col-span-2">
+                  <div className="flex items-center gap-3 mb-6">
+                    <Lightbulb className="h-7 w-7 text-primary" />
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                      Designing an experience for knowledge and confidence
+                    </h2>
+                  </div>
+
+                  <div className="space-y-6">
+                    <p className="text-lg text-foreground leading-relaxed">
+                      To recruit representative participants, I designed a screener for 70
+                      applicants, selecting 20 who worked as coaches, had a background in
+                      psychology, and had business clients who had raised concerns about cyber
+                      incidents.
+                    </p>
+                    <p className="text-lg text-foreground leading-relaxed">
+                      The coaches that joined our training already had some knowledge in
+                      psychology. Some of them understood the main cybersecurity principles.
+                      Before and after the programme, trainees rated their confidence (1–5) in
+                      working with clients in situations that required knowledge of
+                      cybersecurity. Additionally, we tested their knowledge of key principles of
+                      cybersecurity and psychology.
+                    </p>
+                    <p className="text-lg text-foreground leading-relaxed">
+                      I worked together with Subject Matter Experts in both fields, to create
+                      tasks for the trainees where they would apply their knowledge of the
+                      conflict-resolution psychology model for a variety of real-life situations
+                      involving cybersecurity incidents.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Learnings */}
+        {/* Changing the trainees' mindset */}
         <section className="py-20 bg-muted/40">
           <div className="container-width section-padding">
             <div className="max-w-4xl mx-auto">
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-6">
+                <TrendingUp className="h-7 w-7 text-primary" />
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                  Changing the trainees' mindset
+                </h2>
+              </div>
+
+              <p className="text-lg text-foreground leading-relaxed mb-8">
+                Both tests of the trainees' knowledge in cybersecurity and psychology principles
+                showed improvements. More importantly, their feedback has demonstrated a shifted
+                mindset: Some of the trainees that have never seen themselves as 'a techie', found
+                themselves using complex terms while solving a case-study. A trainee that had
+                previously found cybersecurity compliance training a chore, later incorporated
+                the experience he received into a training for his colleagues, keen to spread
+                this knowledge.
+              </p>
+
+              <div className="rounded-lg overflow-hidden shadow-md border border-border bg-white mb-8">
+                <img
+                  src={img('mindhug_confidence-shift.png')}
+                  alt="Chart showing every trainee reported higher confidence after the programme"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              <blockquote className="border-l-4 border-primary pl-6 italic text-lg text-foreground leading-relaxed">
+                "All the time I had to deal with cyber training I was bored of it or saw it as a
+                pain, and now with the training I am now advocating for it, asking more
+                questions."
+                <footer className="mt-3 text-base not-italic font-medium text-muted-foreground">
+                  — Programme participant
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        {/* What we learned */}
+        <section className="py-20">
+          <div className="container-width section-padding">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
                 <GraduationCap className="h-7 w-7 text-primary" />
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                  Learnings
+                  What we learned
                 </h2>
               </div>
-              <div className="space-y-6">
-                {learnings.map((item) => (
-                  <Card key={item.title} className="border-none shadow-md">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-foreground leading-relaxed">{item.body}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              <p className="text-lg text-foreground leading-relaxed">
+                This programme pilot has taught us to uncover trainee's needs and desirable
+                actions early in the programme design. Due to the time constraints, we risked
+                delivering training with content that would not have been effective for this
+                audience. There were still gaps to address, as the objectives of the programme
+                were later revisited and refined for this audience. Later on, this programme
+                received CPD accreditation and became a flagship product for MindHug.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Back to home */}
-        <section className="py-16">
+        <section className="py-16 bg-muted/40">
           <div className="container-width section-padding text-center">
             <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors">
               <ArrowLeft className="h-4 w-4 mr-2" />

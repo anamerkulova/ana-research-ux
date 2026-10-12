@@ -25,10 +25,11 @@ const FeaturedWorkSection = () => {
     {
       number: '3',
       label: 'With non-technical trainees in a learning programme.',
-      question: 'What research to choose with a team working on a 3-month government deadline?',
+      question: 'What research to choose with a new team working on a 3-month government deadline?',
       description:
         "The team started with building content for the programme, so quick understanding of the learners was needed to align the team on learners' needs and intended outcomes of this short programme.",
-      tags: ['Interview', 'Survey', 'Storymapping'],
+      tags: ['Interview', 'Survey', 'Assessment'],
+      image: 'mindhug_confidence-shift.png',
       link: '/mindhug',
     },
     {
@@ -58,8 +59,16 @@ const FeaturedWorkSection = () => {
                     project.link ? 'hover:shadow-md cursor-pointer' : ''
                   }`}
                 >
-                  <div className="aspect-video bg-muted rounded-t-lg flex items-center justify-center">
-                    <ImageIcon className="h-8 w-8 text-muted-foreground/30" />
+                  <div className="aspect-video bg-muted rounded-t-lg flex items-center justify-center overflow-hidden">
+                    {project.image ? (
+                      <img
+                        src={`${import.meta.env.BASE_URL}lovable-uploads/${project.image}`}
+                        alt={project.question}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <ImageIcon className="h-8 w-8 text-muted-foreground/30" />
+                    )}
                   </div>
                   <CardContent className="p-6">
                     <p className="text-sm font-medium text-muted-foreground mb-3">
