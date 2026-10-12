@@ -55,15 +55,15 @@ const AboutMe = () => {
                   <CardContent className="p-8">
                     <div className="prose prose-lg max-w-none text-foreground">
                       <p className="text-lg leading-relaxed mb-6">
-                        I've always been interested in the learning process and behaviour science, and loved books. My transition to experience design has been incremental, as I worked on projects within education, charity and mental health sectors.
+                        I've always been interested in the learning process and behaviour science, and loved books. Gradually I went from educational psychology to language teaching, to design and research, as I worked on more projects within the education, charity and mental health sectors.
                       </p>
 
                       <p className="text-lg leading-relaxed mb-6">
-                        I like making complex things easy for people, and I spent my 20s as a language teacher, taking difficult concepts and seeing learners' confidence increase when using them. There is quite a lot of frustrating software people need to work with as teachers, and somehow I became a go-to person for that. I'd create surveys, find efficient ways to collect people's feedback to make sure people feel heard.
+                        I like making complex things easy for people, and spent my 20s as a language teacher, taking difficult concepts and seeing learners' confidence increase when using them. There is quite a lot of frustrating software people need to work with as teachers, and I started my path into UX by trying to find better ways to collect people's feedback and make sure they felt heard.
                       </p>
 
                       <p className="text-lg leading-relaxed">
-                        I'm keen on hearing all sides of the story and approaching problems from the 'why' side. I begin every project with finding alignment with people, and understanding what we all need to learn to start moving in the right direction.
+                        When working on a project I begin by finding alignment with people, and understanding what we all need to learn to start moving in the desired direction. Currently I am pursuing an MA in Education and Technology to deepen my knowledge of research methodology.
                       </p>
                     </div>
                   </CardContent>
@@ -107,21 +107,23 @@ const AboutMe = () => {
                   <CardContent className="space-y-4">
                     <div className="bg-muted/50 p-4 rounded-lg">
                       <h4 className="font-semibold text-foreground mb-1">
+                        MA Education and Technology
+                      </h4>
+                      <p className="text-sm text-muted-foreground">UCL, 2028</p>
+                    </div>
+
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-1">
                         BA (Hons) Educational Psychology
                       </h4>
                       <p className="text-sm text-muted-foreground">Moscow State University, 2006–2011</p>
                     </div>
 
                     <div className="bg-muted/50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-foreground mb-1">UX Design Certification</h4>
-                      <p className="text-sm text-muted-foreground">DesignLab, 2021–2022</p>
-                    </div>
-
-                    <div className="bg-muted/50 p-4 rounded-lg">
                       <h4 className="font-semibold text-foreground mb-1">
-                        Regenerative Design Leadership
+                        Diploma in Teaching English to Adult Learners (DELTA)
                       </h4>
-                      <p className="text-sm text-muted-foreground">UX for Change, 2025</p>
+                      <p className="text-sm text-muted-foreground">Cambridge University Press and Assessment, 2022</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -135,40 +137,32 @@ const AboutMe = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="bg-muted/50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                        🏆 School of UX - 7-Week UX Skills Bootcamp (2023)
+                      <h4 className="font-semibold text-foreground mb-1">
+                        Regenerative Design Leadership
                       </h4>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        Government-funded intensive program covering:
-                      </p>
-                      <ul className="text-sm text-foreground space-y-1">
-                        <li>• User research methods</li>
-                        <li>• Wireframing and prototyping</li>
-                        <li>• Usability testing</li>
-                        <li>• Design systems</li>
-                        <li>• Behavioral psychology in UX</li>
-                      </ul>
+                      <p className="text-sm text-muted-foreground">UX for Change, 2025</p>
                     </div>
 
                     <div className="bg-muted/50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-foreground mb-2">Automations for Business Leaders</h4>
-                      <p className="text-sm text-muted-foreground">2025</p>
+                      <h4 className="font-semibold text-foreground mb-2">UX Design Certification</h4>
+                      <ul className="text-sm text-foreground space-y-1">
+                        <li>- DesignLab, 2021–2022</li>
+                        <li>- School of UX, 2023</li>
+                      </ul>
                     </div>
 
                     <div className="bg-muted/50 p-4 rounded-lg">
                       <h4 className="font-semibold text-foreground mb-2">LinkedIn Learning</h4>
                       <ul className="text-sm text-foreground space-y-1">
-                        <li>- Designing for Digital Accessibility in Online Learning</li>
-                        <li>- Inclusive Typography</li>
+                        <li>- Designing for Digital Accessibility in Online Learning, 2026</li>
+                        <li>- Inclusive Typography, 2025</li>
                       </ul>
                     </div>
 
                     <div className="bg-muted/50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-foreground mb-2">✅ UXcel</h4>
+                      <h4 className="font-semibold text-foreground mb-2">Maven</h4>
                       <ul className="text-sm text-foreground space-y-1">
-                        <li>- Product Management course (2025)</li>
-                        <li>- Accessibility course (2024)</li>
-                        <li>- Service Design course (2024)</li>
+                        <li>- AI Automation for Business Leaders and Operations Managers, 2025</li>
                       </ul>
                     </div>
                   </CardContent>
