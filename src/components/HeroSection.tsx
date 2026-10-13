@@ -11,14 +11,8 @@ const HeroSection = () => {
             This is what we are here for.
           </p>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="flex lg:items-end">
-              <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-                Research that has shaped design decisions:
-              </h2>
-            </div>
-
-            <div>
+          <div className="flex justify-end">
+            <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-md">
                 <img
                   src={`${import.meta.env.BASE_URL}lovable-uploads/ana_workshop_image.jpeg`}
@@ -37,6 +31,10 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+
+          <h2 className="mt-10 max-w-xl text-2xl md:text-3xl font-semibold text-foreground">
+            Research that informs design:
+          </h2>
         </div>
       </div>
     </section>
