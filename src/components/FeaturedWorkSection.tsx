@@ -21,6 +21,11 @@ const accentStyles = {
     heading: 'text-[hsl(10,60%,48%)]',
     button: 'bg-[hsl(10,65%,64%)] hover:bg-[hsl(10,65%,58%)] text-white',
   },
+  muted: {
+    badge: 'bg-muted-foreground/15 text-muted-foreground',
+    heading: 'text-muted-foreground',
+    button: 'bg-muted text-muted-foreground',
+  },
 } as const;
 
 const FeaturedWorkSection = () => {
@@ -67,11 +72,12 @@ const FeaturedWorkSection = () => {
     },
     {
       number: '4',
-      label: 'With trauma-informed workshop attendees and facilitators.',
+      label: 'With trauma-informed workshop attendees and facilitators (Coming soon).',
       question: 'How to ensure a facilitation tool works for participants?',
       description:
         "I have taken the 'social battery' tool and researched how and why it works, tested it with workshop participants and created a facilitator's guide.",
       tags: ['Usability testing', 'Desk research'],
+      accent: 'muted' as const,
       link: null,
     },
   ];
@@ -84,12 +90,13 @@ const FeaturedWorkSection = () => {
             {projects.map((project) => {
               const accent = accentStyles[project.accent ?? 'purple'];
               const isInteractive = Boolean(project.link || project.modal);
+              const isComingSoon = project.accent === 'muted';
 
               const cardContent = (
                 <Card
                   className={`h-full border border-border shadow-none transition-shadow duration-300 ${
                     isInteractive ? 'hover:shadow-md cursor-pointer' : ''
-                  }`}
+                  } ${isComingSoon ? 'bg-muted/40' : ''}`}
                 >
                   <div className={`px-6 py-5 rounded-t-lg ${accent.badge}`}>
                     <p className="text-lg font-semibold leading-snug">
