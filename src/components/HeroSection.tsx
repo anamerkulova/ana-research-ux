@@ -1,7 +1,7 @@
 
 const HeroSection = () => {
   return (
-    <section className="py-24 md:py-28">
+    <section className="pt-24 md:pt-28 pb-16">
       <div className="container-width section-padding">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight max-w-3xl">
