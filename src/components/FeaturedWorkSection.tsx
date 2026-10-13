@@ -127,9 +127,13 @@ const FeaturedWorkSection = () => {
                         </span>
                       ))}
                     </div>
-                    {isInteractive && (
+                    {isInteractive ? (
                       <span className="text-foreground font-medium">
                         {project.ctaLabel ?? 'View Case Study'} →
+                      </span>
+                    ) : (
+                      <span className="text-muted-foreground font-medium italic">
+                        Case study to be added
                       </span>
                     )}
                   </CardContent>
