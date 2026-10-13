@@ -14,25 +14,28 @@ const AboutMe = () => {
           <div className="container-width section-padding">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Photo */}
+                <div className="flex justify-center lg:justify-start">
+                  <div className="w-full max-w-[260px] rounded-lg overflow-hidden shadow-lg">
+                    <img
+                      src={`${import.meta.env.BASE_URL}lovable-uploads/9dfa6111-94fa-4c6c-985c-fc3687c5055e.png`}
+                      alt="Ana Merkulova professional headshot"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </div>
+
                 {/* Text Content */}
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                     About Me
                   </h1>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    As a designer who bridges psychology and user experience, I'm particularly interested in responsible service design, education and storytelling. Here's my story and the learning that shapes how I approach design challenges.
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                    As a UX researcher, I'm particularly interested in presenting information in an accessible way. So I am exploring storytelling, prototyping and responsible co-design methods.
                   </p>
-                </div>
-
-                {/* Photo */}
-                <div className="flex justify-center lg:justify-end">
-                  <div className="w-80 h-80 rounded-full overflow-hidden shadow-lg">
-                    <img
-                      src={`${import.meta.env.BASE_URL}lovable-uploads/ae33615f-fc4f-4e31-9b17-0ff3d314310d.png`}
-                      alt="Ana Merkulova outdoors with scarf"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Here's my story and the learning that shapes how I approach design challenges.
+                  </p>
                 </div>
               </div>
             </div>
