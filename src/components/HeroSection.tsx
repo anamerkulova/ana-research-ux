@@ -1,4 +1,6 @@
 
+import { Link } from 'react-router-dom';
+
 const HeroSection = () => {
   return (
     <section className="pt-24 md:pt-28 pb-16">
@@ -13,13 +15,13 @@ const HeroSection = () => {
 
           <div className="flex justify-end">
             <div className="w-full lg:w-1/2">
-              <div className="rounded-lg overflow-hidden shadow-md">
+              <Link to="/about" className="block rounded-lg overflow-hidden shadow-md transition-opacity hover:opacity-90">
                 <img
                   src={`${import.meta.env.BASE_URL}lovable-uploads/ana_workshop_image.jpeg`}
                   alt="Ana facilitating a UX for Change London workshop"
                   className="w-full h-auto object-cover"
                 />
-              </div>
+              </Link>
 
               <div className="mt-6">
                 <p className="text-lg text-muted-foreground">
