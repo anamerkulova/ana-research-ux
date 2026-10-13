@@ -10,8 +10,8 @@ const HeroSection = () => {
           This is what we are here for.
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div className="flex lg:items-end">
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
               Research that has shaped design decisions:
             </h2>
