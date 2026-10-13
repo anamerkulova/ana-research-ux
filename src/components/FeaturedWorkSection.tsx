@@ -91,10 +91,10 @@ const FeaturedWorkSection = () => {
                     isInteractive ? 'hover:shadow-md cursor-pointer' : ''
                   }`}
                 >
-                  <div className="px-6 pt-5 pb-4">
-                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${accent.badge}`}>
+                  <div className={`px-6 py-5 rounded-t-lg ${accent.badge}`}>
+                    <p className="text-lg font-semibold leading-snug">
                       {project.label}
-                    </span>
+                    </p>
                   </div>
                   <div className="relative aspect-video bg-muted flex items-center justify-center overflow-hidden">
                     {project.image ? (
