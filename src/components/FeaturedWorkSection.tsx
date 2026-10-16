@@ -26,6 +26,11 @@ const accentStyles = {
     heading: 'text-muted-foreground',
     button: 'bg-muted text-muted-foreground',
   },
+  green: {
+    badge: 'bg-[hsl(145,45%,32%)] text-white',
+    heading: 'text-[hsl(145,45%,28%)]',
+    button: 'bg-[hsl(145,45%,32%)] hover:bg-[hsl(145,45%,28%)] text-white',
+  },
 } as const;
 
 const FeaturedWorkSection = () => {
@@ -47,6 +52,8 @@ const FeaturedWorkSection = () => {
       description:
         'I led three designers from research to the creation of the first prototype. After our co-imagination workshop with domestic violence survivors, we were faced with the challenge of choosing a path for designing a prototype, letting go of other possible solutions.',
       tags: ['Qualitative research', 'Workshop', 'Usability testing', 'Pattern analysis'],
+      image: 'UXforChange-Sept2025 - Pillow_system.jpg',
+      accent: 'green' as const,
       link: '/ux-for-change',
     },
     {
@@ -107,7 +114,7 @@ const FeaturedWorkSection = () => {
                     {project.image ? (
                       <>
                         <img
-                          src={`${import.meta.env.BASE_URL}lovable-uploads/${project.image}`}
+                          src={`${import.meta.env.BASE_URL}lovable-uploads/${encodeURIComponent(project.image)}`}
                           alt={project.question}
                           className="w-full h-full object-cover"
                         />
